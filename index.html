@@ -18,11 +18,14 @@
       font-size: 20px;
       font-family: Georgia, 'Times New Roman', Times, serif;
       text-rendering: optimizeLegibility;
+      z-index: 1;
+      color: #ffffff;
     }
 
     .content {
       max-width: 640px;
       margin: auto;
+      z-index: 1;
     }
 
     .header {
@@ -34,7 +37,6 @@
     }
 
     .footer {
-      background: #f4f4f4;
       text-align: center;
       font-size: 0.8em;
       margin-top: 4em;
@@ -42,8 +44,12 @@
     }
 
     figure {
-      margin: 0;
-      padding-bottom: 1.2em;
+      /* margin: 0;
+      padding-bottom: 1.2em; */
+      width: 105%; /* Adjust the width as needed */
+      display: block;
+      margin: auto; /* Centers the image horizontally */
+      padding-top: 4em;
     }
 
     figcaption {
@@ -58,6 +64,7 @@
       font-weight: bold;
       font-size: 2em;
       line-height: 1.1;
+      color: #ffffff;
     }
 
     .subhead {
@@ -119,11 +126,12 @@
 </head>
 
 <body>
+  <div class="background-svg">
   <div class="content">
     <div class="header">
       <h1>How do Oscar winners stack up against top-grossing movies at the box office?</h1>
       <div class="figure">
-        <img src="OscarsBoxOfficeTitleSlide.png" style="width: 700px; height: auto; display: block; margin: 0 auto;">
+        <img src="transparentTitleSlide.png" style="width: 700px; height: auto; display: block; margin: 0 auto;">
       </div>
       <div class="byline">
         <br>
@@ -150,34 +158,37 @@
       </div>
       <div class="step" id="step2">
         <div>
-          <p>Comparatively, the domestic gross of Best Picture winners have declined over the years. <br><br>The box office success of Oscar winners pales in comparison to the top-grossing movies.</p>
+          <p>Comparatively, the domestic gross of Best Picture winners have declined over the years. <br></p>
         </div>
       </div>
       <div class="step" id="step3">
-        <p>'Titanic' and 'Forrest Gump' are the only Best Picture winners that have also ruled the box office.</p>
+        <p>'Titanic', 'Forrest Gump' and 'Lord of the Rings: The Return of the King' are the only Best Picture winners that have also ruled the box office.</p>
       </div>
       <div class="step" id="step4">
-        <p>Notably, 'Lord of the Rings: The Return of the King' (2003) won the Oscar for Best Picture in 2004 and made more revenue that Finding Nemo (2003). <br> <br>But... Shrek 2 (2004) made more money at the box office than LOTR.
-        </p>
-    </div>
-    <div class="step" id="step5">
-      <p>More recently, 'Oppenheimer' is the first Best Picture winner to gross over $100 million USD in 10 years. The last film to do so was 'Argo'.
+      <p>On average, over the last 10 years, top-grossing movies racked up a whopping 13 times more revenue than Best Picture winners at the Oscars between 2014 and 2023.
+      </div>
+      <div class="step" id="step5">
+        <p>'Oppenheimer' is the first Best Picture winner to gross over $100 million USD in 10 years. The last film to do so was 'Argo'.
+        </div>
       </p>
-  </div>
-  <div class="step" id="step6">
-    <p>On average, top-grossing movies racked up a whopping 13 times more revenue than Best Picture winners at the Oscars between 2014 and 2023.
-    </p>
 </div>
   </section>
   <div class="content">
     <p>The above data illustrates that commercial success does not necessarily mean a film will be met with critical acclaim. If anything, recent data suggests that less popular films are more likely to take home Best Picture with movies like ‘Nomadland’ and ‘CODA’ taking home the Oscar. 
-    </p>
+    </p><br>
+    But how does genre come into it? Etc. ETc. blah <br><br>
+    <figure>
+      <img
+          src="genreAnalysisModern.png">
+      <figcaption>This is another image caption, but this time it's a full-width image</figcaption>
+  </figure>
   </div>
   <div class="footer">
     <div class="content">
       <p>You can find the data analysis and code for this story <a href="https://github.com/sohani-mg/Best-Picture-winners-are-rarely-a-box-office-hit">here</a>. 
     </div>
   </div>
+</div>
 
   <script>
     /*************
@@ -217,28 +228,25 @@
     This part sets up your actions. In this case, it's changing the image in the scrolly container.
     */
     d3.select("#step1").on('stepin', (e) => {
-      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "firstSlideFinal.png")
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "czeroSlideFinal.png")
     })
     
     d3.select("#step2").on('stepin', (e) => {
-      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "secondSlideFinal.png")
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "firstSlideFinal.png")
     })
 
     d3.select("#step3").on('stepin', (e) => {
-      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "lotr.png")
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "secondSlideFinal.png")
     })
 
     d3.select("#step4").on('stepin', (e) => {
-      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "thirdSlideFinal.png")
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "lastSlideFinalpng.png")
     })
 
     d3.select("#step5").on('stepin', (e) => {
-      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "lastSlideFinal.png")
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "chartTwo.png")
     })
 
-    d3.select("#step6").on('stepin', (e) => {
-      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "lastSlideFinal.png")
-    })
   </script>
   <style>
     /* Change this to adjust the padding between steps */

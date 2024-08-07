@@ -1,3 +1,9 @@
+body {
+  height: 2000px; /* Make sure the content is long enough to enable scrolling */
+  background: url('Background.png') no-repeat center center fixed;
+  background-size: cover; /* Adjust the background size */
+}
+
 /* Target specific images in #scrolly-images */
 #scrolly-images .sticky-thing img {
   max-width: 55%; /* Adjust the width as needed */
