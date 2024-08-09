@@ -162,26 +162,33 @@
         </div>
       </div>
       <div class="step" id="step3">
-        <p>'Titanic', 'Forrest Gump' and 'Lord of the Rings: The Return of the King' are the only Best Picture winners that have also ruled the box office.</p>
+        <p>'Titanic', 'Forrest Gump' and 'Lord of the Rings: The Return of the King' are the only Best Picture winners that have also ruled the box office in recent years.</p>
       </div>
       <div class="step" id="step4">
       <p>On average, over the last 10 years, top-grossing movies racked up a whopping 13 times more revenue than Best Picture winners at the Oscars between 2014 and 2023.
       </div>
-      <div class="step" id="step5">
-        <p>'Oppenheimer' is the first Best Picture winner to gross over $100 million USD in 10 years. The last film to do so was 'Argo'.
-        </div>
-      </p>
 </div>
   </section>
   <div class="content">
-    <p>The above data illustrates that commercial success does not necessarily mean a film will be met with critical acclaim. If anything, recent data suggests that less popular films are more likely to take home Best Picture with movies like ‘Nomadland’ and ‘CODA’ taking home the Oscar. 
+    <p>The huge disparity between what films the critics recognise and what moviegoers enjoy is a recent trend. If we go back even further than what's pictured, we'd find that to be true. Think of popular films like “Rain Man,” “Braveheart,” “Rocky,” “The Godfather,” and “The Sound of Music” to name a few.
+      
+     So what movies are behind this trend? Let's take a closer look at the disparity in the last 10 years and see which movies were regarded by critics and movie-goers.
+    </p>
+    <figure>
+      <img
+          src="chartTwo.png">
+      <figcaption>Source: Box Office Mojo</figcaption>
+  </figure>
+    <p> 
     </p><br>
-    But how does genre come into it? Etc. ETc. blah <br><br>
+   The movies that were selected by critics are almost exclusively Dramas. While moviegoers opt for Action and Adventure above all else.
+   <br>
     <figure>
       <img
           src="genreAnalysisModern.png">
-      <figcaption>This is another image caption, but this time it's a full-width image</figcaption>
-  </figure>
+      <figcaption>Source: Box Office Mojo</figcaption>
+  </figure> <br>
+  <p> Just take a look at this analysis of the top genres. Action and Adventure rein supreme and when you think of two of the three titles that won Best Picture and ruled the box office, Titanic and LOTR are both action movies. </p>
   </div>
   <div class="footer">
     <div class="content">
@@ -241,10 +248,6 @@
 
     d3.select("#step4").on('stepin', (e) => {
       d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "trialLastSlide.png")
-    })
-
-    d3.select("#step5").on('stepin', (e) => {
-      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "chartTwo.png")
     })
 
   </script>
