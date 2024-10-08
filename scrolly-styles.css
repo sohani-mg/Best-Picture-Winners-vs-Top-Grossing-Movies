@@ -1,6 +1,6 @@
 body {
   height: 2000px; /* Make sure the content is long enough to enable scrolling */
-  background: url('Background.png') no-repeat center center fixed;
+  background: url('images/Background.png') no-repeat center center fixed;
   background-size: cover; /* Adjust the background size */
 }
 
